@@ -1,6 +1,6 @@
 {
   "name": "get-ip",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple cli tool to get your ip address.",
   "license": "MIT",
   "repository": "alonalon/get-ip",
