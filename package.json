@@ -1,0 +1,39 @@
+{
+  "name": "get-ip",
+  "version": "0.0.0",
+  "description": "Simple cli tool to get your ip address.",
+  "license": "MIT",
+  "repository": "alonalon/get-ip",
+  "author": {
+    "name": "alonalon",
+    "email": "aronhafner@gmail.com",
+    "url": "github.com/alonalon"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "ip-address",
+    "ip",
+    "IPv4",
+    "address"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "xo": "^0.12.1"
+  }
+}
