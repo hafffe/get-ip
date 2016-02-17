@@ -22,6 +22,7 @@ console.log(getIp());
 ## API
 
 ### getIp()
+Returns an object with ip addresses
 
 ## CLI
 
