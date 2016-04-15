@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
-var getIp = require('./');
+const meow = require('meow');
+const getIp = require('./');
 
-var cli = meow([
+const cli = meow([
 	'Usage',
 	'  $ get-ip',
 	'',
 	'Examples',
 	'  $ get-ip',
-	'  [192.168.9.58, 192.168.10.35]'
+	'  192.168.9.58'
 ]);
 
 if (cli.input.length > 0) {
@@ -17,4 +17,8 @@ if (cli.input.length > 0) {
 	process.exit(1);
 }
 
-console.log(getIp());
+getIp().then(res => {
+	res.forEach(x => {
+		console.log(x);
+	});
+});

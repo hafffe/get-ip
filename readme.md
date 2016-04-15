@@ -15,8 +15,8 @@ $ npm install --save get-ip
 ```js
 const getIp = require('get-ip');
 
-console.log(getIp());
-//=>['192.168.9.104', '192.168.10.35']
+getIp().then(res => console.log(res));
+//=> ['192.168.9.104', '192.168.9.104']
 ```
 
 ## API
@@ -38,7 +38,7 @@ $ get-ip --help
 
   Examples
     $ get-ip
-    ['192.168.9.46']
+    '192.168.9.46'
 ```
 
 
