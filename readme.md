@@ -1,6 +1,6 @@
 # get-ip [![Build Status](https://travis-ci.org/alonalon/get-ip.svg?branch=master)](https://travis-ci.org/alonalon/get-ip)
 
-> Simple cli tool for get your ip address
+> Simple cli tool for get your ip addresses
 
 
 ## Install
@@ -39,6 +39,7 @@ $ get-ip --help
   Examples
     $ get-ip
     '192.168.9.46'
+    '192.168.1.60'
 ```
 
 
