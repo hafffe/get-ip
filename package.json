@@ -30,6 +30,7 @@
     ""
   ],
   "dependencies": {
+    "clipboardy": "^0.1.2",
     "meow": "^3.7.0"
   },
   "devDependencies": {

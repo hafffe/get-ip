@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+const clipboardy = require('clipboardy');
 const meow = require('meow');
 const getIp = require('./');
 
@@ -7,18 +8,27 @@ const cli = meow([
 	'Usage',
 	'  $ get-ip',
 	'',
+	'Options',
+	'  --copy    copy first ip to clipboard',
+	'',
 	'Examples',
 	'  $ get-ip',
+	'  192.168.9.58',
+	'',
+	'  $ get-ip --copy',
 	'  192.168.9.58'
-]);
-
-if (cli.input.length > 0) {
-	console.error('No arguments are expected');
-	process.exit(1);
-}
+], {
+	alias: {
+		c: 'copy'
+	}
+});
 
 getIp().then(res => {
-	res.forEach(x => {
+	res.forEach((x, i) => {
+		if (cli.flags.copy && i === 0) {
+			clipboardy.writeSync(x);
+		}
+
 		console.log(x);
 	});
 });
