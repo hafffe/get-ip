@@ -1,14 +1,15 @@
 'use strict';
 const os = require('os');
-const interfaces = os.networkInterfaces();
 
-module.exports = function () {
+module.exports = () => {
+	const interfaces = os.networkInterfaces();
 	const addresses = [];
 
-	return new Promise(function (resolve) {
-		Object.keys(interfaces).forEach(function (x) {
-			Object.keys(interfaces[x]).forEach(function (y) {
+	return new Promise(resolve => {
+		Object.keys(interfaces).forEach(x => {
+			Object.keys(interfaces[x]).forEach(y => {
 				const address = interfaces[x][y];
+
 				if (address.family === 'IPv4' && !address.internal) {
 					addresses.push(address.address);
 				}
