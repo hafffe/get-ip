@@ -1,21 +1,17 @@
 'use strict';
 const os = require('os');
 
-module.exports = () => {
+const getIp = family => {
 	const interfaces = os.networkInterfaces();
-	const addresses = [];
 
-	return new Promise(resolve => {
-		Object.keys(interfaces).forEach(x => {
-			Object.keys(interfaces[x]).forEach(y => {
-				const address = interfaces[x][y];
+	return Object.keys(interfaces).reduce((arr, x) => {
+		const interfce = interfaces[x];
 
-				if (address.family === 'IPv4' && !address.internal) {
-					addresses.push(address.address);
-				}
-			});
-		});
-
-		resolve(addresses);
-	});
+		return arr.concat(Object.keys(interfce)
+			.filter(x => interfce[x].family === family && !interfce[x].internal)
+			.map(x => interfce[x].address));
+	}, []);
 };
+
+module.exports = () => getIp('IPv4');
+module.exports.v6 = () => getIp('IPv6');

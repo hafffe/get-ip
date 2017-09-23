@@ -1,6 +1,15 @@
 import test from 'ava';
-import getIp from './';
+import isIp from 'is-ip';
+import m from '.';
 
-test('result should be an array', async t => {
-	t.true(Array.isArray(await getIp()));
+test('ipv4', t => {
+	for (const x of m()) {
+		t.true(isIp.v4(x));
+	}
+});
+
+test('ipv6', t => {
+	for (const x of m.v6()) {
+		t.true(isIp.v6(x));
+	}
 });
