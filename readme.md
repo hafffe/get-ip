@@ -45,4 +45,4 @@ $ get-ip --help
 
 ## License
 
-MIT © [alonalon](http://github.com/alonalon)
+MIT © [alonalon](https://github.com/alonalon)
