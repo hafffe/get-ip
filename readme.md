@@ -1,6 +1,6 @@
 # get-ip [![Build Status](https://travis-ci.org/alonalon/get-ip.svg?branch=master)](https://travis-ci.org/alonalon/get-ip)
 
-> Simple cli tool for get your internal IP addresses
+> Simple CLI tool for get your internal IP addresses
 
 
 ## Install
