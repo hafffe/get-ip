@@ -23,11 +23,11 @@ getIp();
 
 ### getIp()
 
-Returns a `Promise` with an `Array` of IPv4 addresses.
+Returns an `Array` of IPv4 addresses.
 
 ### getIp.v6()
 
-Returns a `Promise` with an `Array` of IPv6 addresses.
+Returns an `Array` of IPv6 addresses.
 
 
 ## CLI
