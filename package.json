@@ -34,6 +34,8 @@
 	},
 	"devDependencies": {
 		"ava": "*",
+		"ip-regex": "^2.1.0",
+		"is-ip": "^2.0.0",
 		"xo": "*"
 	}
 }
